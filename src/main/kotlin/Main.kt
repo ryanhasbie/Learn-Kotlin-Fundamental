@@ -1,12 +1,27 @@
 fun main(args: Array<String>) {
-    sayHello()
+    exampleConditional()
 }
 
-fun sayHello() {
-    val stringValue: String = "My age is"
-    val intValue: Int = 21
-    val boolValue: Boolean = true
-    val charValue: Char = 'R'
-    val floatValue: Float = 10.5F
-    val doubleValue: Double = 10.55
+fun exampleConditional() {
+    val number: Int = 1
+    val day: Int = 3
+
+    if (number > 0 ) {
+        println("Positive number")
+    } else if (number < 0) {
+        println("Negative number")
+    } else {
+        println("Number is zero")
+    }
+
+    when(day) {
+        1 -> println("Monday")
+        2 -> println("Tuesday")
+        3 -> println("Wednesday")
+        4 -> println("Thursday")
+        5 -> println("Friday")
+        6 -> println("Saturday")
+        7 -> println("Sunday")
+        else -> println("Invalid day")
+    }
 }
