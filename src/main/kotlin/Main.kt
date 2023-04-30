@@ -1,16 +1,10 @@
 fun main(args: Array<String>) {
-    exampleCollection()
+   val persons = arrayOf(
+       Person("Ryan", 21),
+       Person("John", 31),
+       Person("Jane", 22)
+   )
+   for (person in persons) println(person)
 }
 
-fun exampleCollection() {
-    // Array Of
-    val names = arrayOf("Ryan", "John", "Jane")
-    for (name in names) println(name)
-
-    // Array List
-    var nameList = arrayListOf<String>()
-    nameList.add("Cristiano")
-    nameList.add("Mark")
-    nameList.add("Elon")
-    for (nameWithList in nameList) println(nameWithList)
-}
+data class Person (val name:String, val age:Int)
