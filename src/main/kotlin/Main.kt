@@ -3,16 +3,10 @@ fun main(args: Array<String>) {
 }
 
 fun sayHello() {
-    // Variable cannot be reassigned (val)
-    val name = "Ryan"
-
-    // Error
-    // name = "Hasbie"
-
-    // Variable that can be reassigned
-    // Mutable variable (var)
-    var message = "first message"
-    message = "This is message pass by reassign"
-
-    println("Hello $name, $message")
+    val stringValue: String = "My age is"
+    val intValue: Int = 21
+    val boolValue: Boolean = true
+    val charValue: Char = 'R'
+    val floatValue: Float = 10.5F
+    val doubleValue: Double = 10.55
 }
