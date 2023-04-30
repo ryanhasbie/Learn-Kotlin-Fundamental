@@ -1,22 +1,16 @@
 fun main(args: Array<String>) {
-    exampleLoop()
+    exampleCollection()
 }
 
-fun exampleLoop() {
-    // For
+fun exampleCollection() {
+    // Array Of
     val names = arrayOf("Ryan", "John", "Jane")
     for (name in names) println(name)
 
-    // While
-    var x = 5
-    while (x >= 1) {
-        println(x)
-        x--
-    }
-
-    // Do while
-    do {
-        println(x)
-        x++
-    } while (x <= 10)
+    // Array List
+    var nameList = arrayListOf<String>()
+    nameList.add("Cristiano")
+    nameList.add("Mark")
+    nameList.add("Elon")
+    for (nameWithList in nameList) println(nameWithList)
 }
