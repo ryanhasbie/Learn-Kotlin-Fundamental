@@ -1,16 +1,13 @@
-class Person (val name: String, val age: Int) {
-    fun greeting() {
-        println("Hello my name is $name")
-    }
-    // Run automation fun greeting use init
+object SingleTon {
     init {
-        greeting()
+        println("Singleton object created");
+    }
+
+    fun doSomething() {
+        println("Doing something...");
     }
 }
 
 fun main(args: Array<String>) {
-    val person = Person("Ryan", 21)
-    // No need to call
-    // person.greeting()
-    println("My age is ${person.age}")
+    SingleTon.doSomething()
 }
