@@ -1,10 +1,11 @@
-fun main(args: Array<String>) {
-   val persons = arrayOf(
-       Person("Ryan", 21),
-       Person("John", 31),
-       Person("Jane", 22)
-   )
-   for (person in persons) println(person)
+class Person (val name: String, val age: Int) {
+    fun greeting() {
+        println("Hello my name is $name")
+    }
 }
 
-data class Person (val name:String, val age:Int)
+fun main(args: Array<String>) {
+    val person = Person("Ryan", 21)
+    person.greeting()
+    println("My age is ${person.age}")
+}
