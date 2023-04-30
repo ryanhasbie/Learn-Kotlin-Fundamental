@@ -1,27 +1,22 @@
 fun main(args: Array<String>) {
-    exampleConditional()
+    exampleLoop()
 }
 
-fun exampleConditional() {
-    val number: Int = 1
-    val day: Int = 3
+fun exampleLoop() {
+    // For
+    val names = arrayOf("Ryan", "John", "Jane")
+    for (name in names) println(name)
 
-    if (number > 0 ) {
-        println("Positive number")
-    } else if (number < 0) {
-        println("Negative number")
-    } else {
-        println("Number is zero")
+    // While
+    var x = 5
+    while (x >= 1) {
+        println(x)
+        x--
     }
 
-    when(day) {
-        1 -> println("Monday")
-        2 -> println("Tuesday")
-        3 -> println("Wednesday")
-        4 -> println("Thursday")
-        5 -> println("Friday")
-        6 -> println("Saturday")
-        7 -> println("Sunday")
-        else -> println("Invalid day")
-    }
+    // Do while
+    do {
+        println(x)
+        x++
+    } while (x <= 10)
 }
