@@ -1,16 +1,20 @@
-interface MathOperation {
-    fun performOperation(a:Double, b:Double) : Double
-}
+class Car(private var speed: Int) {
 
-class Addition : MathOperation {
-    override fun performOperation(a: Double, b: Double) :Double {
-        return a + b
+    fun getSpeed(): Int {
+        return speed
     }
 
+    fun setSpeed(newSpeed: Int) {
+        speed = newSpeed
+    }
 }
 
 fun main(args: Array<String>) {
-    val addition1 = Addition()
-    val result = addition1.performOperation(12.0, 12.0)
-    println(result)
+    val myCar = Car(50)
+    println("Current speed: ${myCar.getSpeed()}") // Output: Current speed: 50
+
+    myCar.setSpeed(80)
+    println("New speed: ${myCar.getSpeed()}") // Output: New speed: 80
+
+    // myCar.speed = 100 // Compile error: "Cannot access 'speed': it is private in 'Car'"
 }
